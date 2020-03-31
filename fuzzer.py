@@ -12,7 +12,7 @@ try:
   for string in buffer:
     print 'Fuzzing App with %s bytes' % len(string)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    connect = s.connect((127.0.0.1,9999))
+    connect = s.connect(('127.0.0.1',9999))
     s.recv(1024)
     s.send(string + '\r\n')
     s.close()
