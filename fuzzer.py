@@ -4,7 +4,7 @@ import socket
 
 buffer = ['A']
 counter = 100
-while len(buffer) <= 10:
+while len(buffer) <= 50:
   buffer.append('A'*counter)
   counter = counter + 100
 
