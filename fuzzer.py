@@ -6,7 +6,7 @@ buffer = ['A']
 counter = 100
 while len(buffer) <= 10:
   buffer.append('A'*counter)
-  counter =+ 100
+  counter = counter + 100
 
 try:
   for string in buffer:
