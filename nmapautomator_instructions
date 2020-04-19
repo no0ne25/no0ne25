@@ -1,0 +1,41 @@
+cd Desktop
+
+sudo apt-get update
+
+#installing gobuster
+sudo apt-get install gobuster --only-upgrade 
+
+
+git clone https://github.com/21y4d/nmapAutomator
+
+cd nmapAutomator
+
+#downloading nmapAutomator
+git clone https://github.com/21y4d/nmapAutomator
+
+#copying scripts to actionable folder
+sudo ln -s /Desktop/nmapAutomator/nmapAutomator.sh /usr/local/bin/
+
+#updating db
+sudo nmap --script-updatedb 
+
+#changing permissions
+sudo chmod 755 nmapAutomator.sh
+
+#still in /nmapAutomator folder
+#running a All scan for ip 10.10.14.8
+sudo ./nmapAutomator.sh 10.10.14.8 All
+
+
+
+    #Quick:	Shows all open ports quickly (~15 seconds)
+    #Basic:	Runs Quick Scan, then runs a more thorough scan on found ports (~5 minutes)
+    #UDP:	Runs "Basic" on UDP ports (~5 minutes)
+    #Full: Runs a full range port scan, then runs a thorough scan on new ports (~5-10 minutes)
+    #Vulns:	Runs CVE scan and nmap Vulns scan on all found ports (~5-15 minutes)
+    #Recon:	Runs "Basic" scan "if not yet run", then suggests recon commands "i.e. gobuster, nikto, smbmap" based on the found ports, then prompts to automatically run them
+    #All: Runs all the scans consecutively (~20-30 minutes)
+    
+    
+
+
